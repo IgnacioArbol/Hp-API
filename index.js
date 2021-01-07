@@ -105,6 +105,13 @@ function vista(character){
         div.setAttribute("id","datos");
         div.style.position="sticky";
         div.style.bottom="0";
+        div.style.display="flex";
+        div.style.flexDirection="column";
+        div.style.background="white";
+        div.style.height="600px";
+        div.style.width="600px";
+        div.style.margin="auto";
+        div.style.border="2px solid black";
         
 
         
@@ -113,9 +120,46 @@ function vista(character){
 
         let img=document.createElement("img");
         img.setAttribute("src", character.image);
-        img.style.width="400px";
+        img.style.width="200px";
+        img.style.padding="10px";
 
-        div.append(img);
+        
+
+        let divarriba=document.createElement("div");
+        divarriba.setAttribute("id","arriba");
+        divarriba.style.display="flex";
+        divarriba.style.justifyContent="space-between";
+        
+
+        let datosarriba=document.createElement("div");
+        datosarriba.style.marginRight="80px";
+        datosarriba.style.marginTop="50px";
+
+        let nombre = document.createElement("p");
+        let especie = document.createElement("p");
+        let genero = document.createElement("p");
+        let casa= document.createElement("p");
+        let fecha= document.createElement("p");
+        let antepasados= document.createElement("p");
+
+
+        nombre.innerText="Name= "+character.name;
+        especie.innerText="species= "+character.species;
+        genero.innerText="gender= "+character.gender;
+        casa.innerText="House= "+character.house;
+        fecha.innerText="Date= "+character.dateOfBirth;
+        antepasados.innerText="Ancestry= "+character.ancestry;
+
+        datosarriba.appendChild(nombre);
+        datosarriba.appendChild(especie);
+        datosarriba.appendChild(genero);
+        datosarriba.appendChild(casa);
+        datosarriba.appendChild(fecha);
+        datosarriba.appendChild(antepasados);
+
+        divarriba.appendChild(img);
+        divarriba.appendChild(datosarriba);
+        div.append(divarriba);
         divpadre.append(div);
     }
 
