@@ -1,7 +1,7 @@
 // Controlador
 
 function load() {
-    var busqueda="http://hp-api.herokuapp.com/api/characters";
+    var busqueda="https://hp-api.herokuapp.com/api/characters";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -19,7 +19,7 @@ function load() {
 
 function buscar(localizar) {
     var casa = null;
-    var busqueda="http://hp-api.herokuapp.com/api/characters";
+    var busqueda="https://hp-api.herokuapp.com/api/characters";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
