@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buscador</title>
+        <meta charset="utf-8" lang="en">
+        <link rel="stylesheet" href="general.css">
+    </head>
+    <body>
+        <header>
+            <div class="izquierda">
+                
+                <img class="logo" src="./images/harry.png" height="70px" onclick="loaddock">
+            </div>
+            <div class="centro">
+                <select name="casas" id="select">
+                    <option value="0">All</option>
+                    <option value="1">Gryffindor</option>
+                    <option value="2">Slytherin</option>
+                    <option value="3">Hufflepuff</option>
+                    <option value="4">Ravenclaw</option>
+                </select>
+                <input id="busqueda" type="text" placeholder=" Search...">
+                <button id="boton" onclick="busca()">Buscar</button>
+            </div>
+            <div id="prueba">
+            </div>
+            
+        </header>
+        <div id="menu">
+
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
+
