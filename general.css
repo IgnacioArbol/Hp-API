@@ -54,16 +54,11 @@ input:focus,select:focus{
 .izquierda{
     margin-left: 20px;
 }
-.derecha{
-    margin-right: 20px;
-    width:20%;
-    display:flex;
-    justify-content: space-around;
-}
+
 .centro{
     width:50%;
 }
-.derecha :nth-child(1), .izquierda :nth-child(2){
+.izquierda :nth-child(2){
     border-radius: 30px;;
 }
 

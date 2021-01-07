@@ -99,11 +99,12 @@ function vista(character){
     div.addEventListener("click", function(){datos(character)})
     divpadre.append(div);
 
-    function datos(characters){
+    function datos(character){
         if(document.getElementById("datos"))document.getElementById("datos").remove();
         let div=document.createElement("div");
         div.setAttribute("id","datos");
-        div.style.position="relative";
+        div.style.position="sticky";
+        div.style.bottom="0";
         
 
         
