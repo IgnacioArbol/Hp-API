@@ -104,7 +104,7 @@ function vista(character){
         let div=document.createElement("div");
         div.setAttribute("id","datos");
         div.style.position="sticky";
-        div.style.bottom="0";
+        div.style.bottom="50px";
         div.style.display="flex";
         div.style.flexDirection="column";
         div.style.background="white";
@@ -120,8 +120,10 @@ function vista(character){
 
         let img=document.createElement("img");
         img.setAttribute("src", character.image);
+        img.style.border="3px solid black";
+        img.style.borderRadius="10px";
         img.style.width="200px";
-        img.style.padding="10px";
+        img.style.margin="10px";
 
         
 
@@ -129,7 +131,12 @@ function vista(character){
         divarriba.setAttribute("id","arriba");
         divarriba.style.display="flex";
         divarriba.style.justifyContent="space-between";
+
+        let cerrar=document.createElement("button");
+        cerrar.innerText="Exit";
+        cerrar.setAttribute("onclick", "cerrar()");
         
+        div.appendChild(cerrar);
 
         let datosarriba=document.createElement("div");
         datosarriba.style.marginRight="80px";
@@ -150,6 +157,17 @@ function vista(character){
         fecha.innerText="Date= "+character.dateOfBirth;
         antepasados.innerText="Ancestry= "+character.ancestry;
 
+        let divabajo= document.createElement("div");
+        divarriba.setAttribute("id","abajo");
+        
+
+        let actor=document.createElement("p");
+        actor.style.textAlign="center";
+        actor.innerText="Name of actor/actress= "+character.actor;
+
+
+
+
         datosarriba.appendChild(nombre);
         datosarriba.appendChild(especie);
         datosarriba.appendChild(genero);
@@ -157,9 +175,14 @@ function vista(character){
         datosarriba.appendChild(fecha);
         datosarriba.appendChild(antepasados);
 
+        divabajo.appendChild(actor);
+
         divarriba.appendChild(img);
         divarriba.appendChild(datosarriba);
+
         div.append(divarriba);
+        div.append(divabajo);
+
         divpadre.append(div);
     }
 
@@ -185,3 +208,7 @@ function controlador(characters){
 }
 document.addEventListener("keydown",function(event){if (event.key === "Enter") busca();})
 var divpadre = " ";
+
+function cerrar(){
+    if(document.getElementById("datos"))document.getElementById("datos").remove();
+}
