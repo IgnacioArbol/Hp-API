@@ -104,7 +104,7 @@ function vista(character){
         let div=document.createElement("div");
         div.setAttribute("id","datos");
         div.style.position="relative";
-        div.style.marginBottom="20%";
+        
 
         
 
